@@ -1,36 +1,34 @@
 {
-	"name": "google-maps",
-	"description": "Wrapper for asynchronously used Google Maps API",
-	"version": "3.2.1",
-	"author": {
-		"name": "David Kudera",
-		"email": "kudera.d@gmail.com"
-	},
-	"keywords": [
-		"google",
-		"maps",
-		"asynchronous",
-		"browser",
-		"wrapper"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:Carrooi/Js-GoogleMapsLoader.git"
-	},
-	"license": "MIT",
-	"engines": {
-		"node": "*"
-	},
-	"main": "./lib/Google.js",
-	"devDependencies": {
-		"uglify-js": "~2.4.0",
-		"mocha": "~2.2.0",
-		"mocha-phantomjs": "~3.5.0",
-		"phantomjs": "~1.9.0",
-		"chai": "~2.3.0"
-	},
-	"scripts": {
-		"minify": "node ./node_modules/uglify-js/bin/uglifyjs ./lib/Google.js -o ./lib/Google.min.js",
-		"test": "node ./node_modules/mocha-phantomjs/bin/mocha-phantomjs -p ./node_modules/phantomjs/bin/phantomjs ./test/index.html"
-	}
+  "name": "google-maps",
+  "description": "Wrapper for asynchronously used Google Maps API",
+  "version": "3.2.1",
+  "author": {
+    "name": "David Kudera",
+    "email": "kudera.d@gmail.com"
+  },
+  "keywords": ["google", "maps", "asynchronous", "browser", "wrapper"],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Carrooi/Js-GoogleMapsLoader.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "main": "./lib/Google.js",
+  "devDependencies": {
+    "chai": "~2.3.0",
+    "eslint": "^4.18.1",
+    "eslint-config-carpages": "^1.0.2",
+    "mocha": "~2.2.0",
+    "mocha-phantomjs": "~3.5.0",
+    "phantomjs": "~1.9.0",
+    "uglify-js": "~2.4.0"
+  },
+  "scripts": {
+    "minify": "uglifyjs ./lib/Google.js -o ./lib/Google.min.js",
+    "test":
+      "mocha-phantomjs -p ./node_modules/phantomjs/bin/phantomjs ./test/index.html",
+    "lint": "eslint lib/Google.js"
+  }
 }
