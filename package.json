@@ -6,7 +6,13 @@
     "name": "David Kudera",
     "email": "kudera.d@gmail.com"
   },
-  "keywords": ["google", "maps", "asynchronous", "browser", "wrapper"],
+  "keywords": [
+    "google",
+    "maps",
+    "asynchronous",
+    "browser",
+    "wrapper"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:Carrooi/Js-GoogleMapsLoader.git"
@@ -17,18 +23,17 @@
   },
   "main": "./lib/Google.js",
   "devDependencies": {
-    "chai": "~2.3.0",
+    "chai": "~4.1.2",
     "eslint": "^4.18.1",
     "eslint-config-carpages": "^1.0.2",
-    "mocha": "~2.2.0",
-    "mocha-phantomjs": "~3.5.0",
-    "phantomjs": "~1.9.0",
-    "uglify-js": "~2.4.0"
+    "mocha": "~5.0.1",
+    "mocha-phantomjs": "~4.1.0",
+    "phantomjs": "~2.1.7",
+    "uglify-js": "~3.3.12"
   },
   "scripts": {
     "minify": "uglifyjs ./lib/Google.js -o ./lib/Google.min.js",
-    "test":
-      "mocha-phantomjs -p ./node_modules/phantomjs/bin/phantomjs ./test/index.html",
+    "test": "mocha-phantomjs -p ./node_modules/phantomjs/bin/phantomjs ./test/index.html",
     "lint": "eslint lib/Google.js"
   }
 }
